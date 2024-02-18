@@ -1,12 +1,17 @@
 package screenmatch.modelos;
 
-public class Titulo {
+public class Titulo implements  Comparable<Titulo> {
   private String nome;
   private int anoDeLancamento;
   private boolean incluidoNoPlano;
   private double somaAvaliacao;
   private int totalDeAvaliacoes;
   private int duracaoEmMinuto;
+
+  public Titulo(String nome, int anoDeLancamento) {
+    this.nome = nome;
+    this.anoDeLancamento = anoDeLancamento;
+  }
 
   public void exibeFichaTecnica(){
     System.out.println("Nome do filme: "+this.nome);
@@ -57,5 +62,10 @@ public class Titulo {
 
   public int getDuracaoEmMinutos() {
     return duracaoEmMinuto;
+  }
+
+  @Override
+  public int compareTo(Titulo x) {
+    return this.getNome().compareTo(x.getNome());
   }
 }
