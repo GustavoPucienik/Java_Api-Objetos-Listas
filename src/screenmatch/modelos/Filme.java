@@ -1,6 +1,8 @@
 package screenmatch.modelos;
 
-public class Filme extends Titulo {
+import screenmatch.calculos.Classificavel;
+
+public class Filme extends Titulo implements Classificavel {
   private String diretor;
 
   public Filme(String nome, int anoDeLancamento) {
@@ -18,5 +20,9 @@ public class Filme extends Titulo {
   @Override
   public String toString() {
     return "Filme: " + this.getNome() + " (" + this.getAnoDeLancamento() + ") ";
+  }
+  public int getClassificacao() {
+    return (int) pegaMedia() / 2;
+  
   }
 }

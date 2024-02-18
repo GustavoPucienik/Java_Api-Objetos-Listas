@@ -1,4 +1,6 @@
 import screenmatch.calculos.CalculadoraDeTempo;
+import screenmatch.calculos.FiltroRecomendacao;
+import screenmatch.modelos.Episodio;
 import screenmatch.modelos.Serie;
 import screenmatch.modelos.Filme;
 
@@ -54,6 +56,15 @@ public class Principal {
     System.out.println("toString do filme é " + listaDeFilmes.get(0).toString());
 
 
+    System.out.println("-------------");
 
+    FiltroRecomendacao filtro = new FiltroRecomendacao();
+    filtro.filtra(meuFilme);
+
+    Episodio episodio = new Episodio();
+    episodio.setNumero(1);
+    episodio.setSerie(lost);
+    episodio.setTotalVizualizacoes(300);
+    filtro.filtra(episodio);
   }
 }
