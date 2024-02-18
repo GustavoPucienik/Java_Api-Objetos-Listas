@@ -4,11 +4,11 @@ import screenmatch.modelos.Episodio;
 import screenmatch.modelos.Serie;
 import screenmatch.modelos.Filme;
 
+import java.util.ArrayList;
+
 public class Principal {
   public static void main(String[] args) {
-    Filme meuFilme = new Filme();
-    meuFilme.setNome("O poderoso chefão");
-    meuFilme.setAnoDeLancamento(1970);
+    Filme meuFilme = new Filme("O poderoso chefão", 1970);
     meuFilme.setDuracaoEmMinuto(180);
     meuFilme.avalia(10);
     meuFilme.avalia(8);
@@ -21,9 +21,8 @@ public class Principal {
     System.out.println(""" 
                                  -----------
                                  """);
-    Serie lost = new Serie();
-    lost.setNome("Lost");
-    lost.setAnoDeLancamento(2000);
+
+    Serie lost = new Serie("Lost", 2000);
     lost.exibeFichaTecnica();
     lost.setTemporadas(10);
     lost.setEpisodiosPorTemporada(12);
@@ -32,9 +31,7 @@ public class Principal {
 
     System.out.println("-------------");
 
-    Filme outroFilme = new Filme();
-    outroFilme.setNome("Avatar");
-    outroFilme.setAnoDeLancamento(1970);
+    Filme outroFilme = new Filme("Avatar", 2023);
     outroFilme.setDuracaoEmMinuto(220);
 
     CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -42,6 +39,22 @@ public class Principal {
     calculadora.inclui(outroFilme);
     calculadora.inclui(lost);
     System.out.println(calculadora.getTempoTotal());
+
+    var filmeDoPaulo = new Filme("Dogville", 2003);
+    filmeDoPaulo.setDuracaoEmMinuto(200);
+    filmeDoPaulo.avalia(10);
+
+    ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+
+    listaDeFilmes.add(meuFilme);
+    listaDeFilmes.add(outroFilme);
+    listaDeFilmes.add(filmeDoPaulo);
+
+    System.out.println("Tamanho da lista " + listaDeFilmes.size());
+    System.out.println("Primeiro filme é " + listaDeFilmes.get(0).getNome());
+    System.out.println(listaDeFilmes);
+    System.out.println("toString do filme é " + listaDeFilmes.get(0).toString());
+
 
     System.out.println("-------------");
 
