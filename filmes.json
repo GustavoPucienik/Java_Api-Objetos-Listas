@@ -1,0 +1,26 @@
+[
+  {
+    "Title": "Super Man",
+    "Year": 2010,
+    "IncluidoNoPlano": false,
+    "SomaAvaliacao": 0.0,
+    "TotalDeAvaliacoes": 0,
+    "DuracaoEmMinuto": 15
+  },
+  {
+    "Title": "Flash",
+    "Year": 1997,
+    "IncluidoNoPlano": false,
+    "SomaAvaliacao": 0.0,
+    "TotalDeAvaliacoes": 0,
+    "DuracaoEmMinuto": 90
+  },
+  {
+    "Title": "Harry Potter and the Deathly Hallows: Part 2",
+    "Year": 2011,
+    "IncluidoNoPlano": false,
+    "SomaAvaliacao": 0.0,
+    "TotalDeAvaliacoes": 0,
+    "DuracaoEmMinuto": 13
+  }
+]
